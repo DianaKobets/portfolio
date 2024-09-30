@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-function NavItem({children} : {children: React.ReactNode}){
+
+function NavItem({ children, href }: { children: React.ReactNode, href: string }) {
     return (
-        <a className="text-gray-200 flex-auto pr-2 text-lg hover:underline z-10" href="#prolects">{children}</a>
+        <Link to={href} className="text-gray-200 pt-1 text-lg hover:text-amber-400 transition-colors duration-300 ease-in-out tracking-wide">
+            {children}
+        </Link>
     );
 }
 
