@@ -1,5 +1,5 @@
 import React from "react";
-import me from '../icons/me.svg';
+import me from '../img/me.svg';
 import git from '../icons/git.svg';
 import tg from '../icons/tg.svg';
 
