@@ -16,7 +16,7 @@
         "/img/ankar1.png", "/img/ankar2.png", "/img/ankar3.png"],
       "link to repos": "https://ankar.ru/",
       "description": "Проект для которого я разрабатывала адаптивный дизайн, а затем реализовывала его на WordPress. Первый коммерческий проект. В ходе выполнения освоила разработку на WordPress, а также углубилась в тему адаптивного дизайна",
-      "photos of technologies": "string",
+      "photos of technologies": ["../icons/css.svg", "../icons/react.svg"],
       "page": "/ProjectPage2"
     }
   ]

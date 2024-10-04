@@ -1,9 +1,13 @@
 import React from "react";
 
-function Slide({src, alt}){
-    return(
-        <div className="mx-auto">
-            <img src={src} alt={alt} className=" mx-auto w-80"/>
+function Slide({ src, alt }) {
+    return (
+        <div className="w-[32rem] h-max  mx-auto"> 
+            <img 
+                src={src} 
+                alt={alt} 
+                className=" w-full h-full rounded-lg mx-auto" 
+            /> 
         </div>
     );
 }

@@ -9,12 +9,12 @@ function Navbar() {
             <div className="img-container">
                <Link to='/'> <img src={main} className="block h-10 w-10 hover:cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out" alt="logo" /></Link>
             </div>
-            <nav className="flex space-x-8 ml-auto">
-                <NavItem href="#about_me">{'Обо мне'}</NavItem>
-                <NavItem href="#projects">{'Проекты'}</NavItem>
-                <NavItem href="#skills">{'Навыки'}</NavItem>
-                <NavItem href="#resume">{'Резюме'}</NavItem>
-                <NavItem href="#contacts">{'Контакты'}</NavItem>
+            <nav className="flex space-x-8 ml-auto hover:cursor-pointer">
+                <NavItem href="about_me">{'Обо мне'}</NavItem>
+                <NavItem href="projects">{'Проекты'}</NavItem>
+                <NavItem href="skills">{'Навыки'}</NavItem>
+                <NavItem href="resume">{'Резюме'}</NavItem>
+                <NavItem href="contacts">{'Контакты'}</NavItem>
                 <button className="flex place-items-center justify-center text-lg bg-amber-500 text-stone-900 rounded-lg w-44 h-10 hover:bg-amber-600 transition-transform duration-300 hover:scale-105 shadow-md">
                     Написать мне
                 </button>

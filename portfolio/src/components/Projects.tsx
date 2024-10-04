@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"; 
+import React, { useState, useEffect, useRef } from "react"; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Slide from './Slide.tsx';
-import { Navigation, Pagination, A11y, EffectCoverflow } from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import projectData from '../data/projects.json';
 import { useLocation } from 'react-router-dom';
-import { Swiper as SwiperClass } from 'swiper/types'; // Импортируем тип Swiper
+import { Swiper as SwiperClass } from 'swiper/types';
 
 
 import 'swiper/css';
@@ -26,42 +26,51 @@ interface Project {
 
 function Projects() {
     const [projects, setProjects] = useState<Project[]>([]);
-    const location = useLocation(); // используем для отслеживания изменений пути
+    const location = useLocation();
+    const swiperRef = useRef<SwiperClass | null>(null)
 
     useEffect(() => {
         setProjects(projectData);
     }, []);
 
     useEffect(() => {
-        // Принудительное обновление Swiper при изменении маршрута
-        const swiperContainer = document.querySelector('.swiper-container') as HTMLDivElement;
-        const swiperInstance = swiperContainer?.swiper as SwiperClass | undefined; // Кастинг к типу Swiper
-
-        if (swiperInstance) {
-            swiperInstance.update(); // вызываем метод update на инстансе Swiper
+        if (swiperRef.current && projects.length > 0) {
+          swiperRef.current.update();
         }
-    }, [location]); // обновляем Swiper при изменении маршрута
+      }, [projects]);
+      
+
+      const handleNextSlide = () => {
+        if (swiperRef.current)
+            swiperRef.current.slideNext();
+      };
+
+      const handlePrevSlide = () => {
+        if (swiperRef.current)
+            swiperRef.current.slidePrev();
+      };
+
 
     return (
         <div className="flex flex-col w-full justify-center relative text-gray-200 bg-stone-900 text-5xl p-8" id="projects">
-            <h1 className="inline-block text-5xl font-bold tracking-wide text-white drop-shadow-md text-center pb-24">Мои проекты</h1>
+            <h1 className="inline-block text-5xl font-bold tracking-wide text-center pb-24">Мои проекты</h1>
+
+            <button className="custom-prev-button bg-amber-500 bg-opacity-80 px-4 py-2 absolute left-48 top-1/2 rounded-full z-10 bg-blend"
+                onClick={handlePrevSlide}
+            >
+                &#5176;
+            </button>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}
-                loop={true}
-                slidesPerView={'auto'}
-                coverflowEffect={{
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 600,
-                    modifier: 2,
-                }}
+                loop={false}
+                slidesPerView={1}
                 spaceBetween={0}
                 pagination={{ el: '.swiper-pagination', clickable: true }}
-                navigation
-                modules={[EffectCoverflow, Pagination, Navigation]}
-                className="swiper-container -top-12 mx-auto"
+                modules={[Pagination, Navigation]}
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+                className=" -top-12 w-[32rem]"
             >
                 {projects.map((project) => (
                     <SwiperSlide key={project.id}>
@@ -71,6 +80,15 @@ function Projects() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+                    
+            <button
+                className="custom-prev-button bg-amber-500 bg-opacity-70 px-4 py-2 absolute right-48 top-1/2 rounded-full"
+                onClick={handleNextSlide}
+            >
+                &#5171;
+            </button>
+
+            
         </div>
     );
 }

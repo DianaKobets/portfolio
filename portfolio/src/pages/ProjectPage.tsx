@@ -7,7 +7,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import projectData from '../data/projects.json';
-import css from '../icons/css.svg'; 
 
 function ProjectPage() {
     const { id } = useParams<{ id: string }>(); 
@@ -16,8 +15,8 @@ function ProjectPage() {
     if (!project) return <span>Проект не найден</span>;
 
     return (
-        <div className="flex flex-row w-full justify-between items-center text-gray-200 bg-stone-900 py-10 px-10">
-            <div className="relative w-1/2">
+        <div className="flex flex-row w-full justify-between  text-gray-200 bg-stone-900 py-10 px-10">
+            <div className="relative w-1/2 mt-10">
                 <Swiper
                     effect={'coverflow'}
                     grabCursor={true}
@@ -31,7 +30,7 @@ function ProjectPage() {
                         modifier: 2,
                     }}
                     spaceBetween={0}
-                    pagination={{ el: '.swiper-pagination', clickable: true }}
+                    pagination={{el: '.swiper-pagination', clickable: true }}
                     navigation
                     modules={[EffectCoverflow, Pagination, Navigation]}
                     className="w-full h-full"
@@ -47,6 +46,7 @@ function ProjectPage() {
                                 <img src={project.image} alt={project.name} />
                             </SwiperSlide>
                         )}
+                        <div className="swiper-pagination mt-4"></div>
                 </Swiper>
 
                 <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
@@ -63,22 +63,24 @@ function ProjectPage() {
 
             <div className="w-1/2 pl-10">
                 <h1 className="text-5xl font-bold tracking-wide drop-shadow-md text-center mb-6">{project.name}</h1>
-                <p className="text-xl mb-6">{project.description}</p>
+                <p className="text-xl mb-4">{project.description}</p>
 
-                <div>
-                    <h2 className="text-3xl font-bold mb-4">Стек</h2>
+                <div className="mx-auto items-center flex flex-col justify-center">
+                    <h2 className="text-4xl font-bold mb-4">Стек</h2>
                     <div className="flex space-x-4">
                         {Array.isArray(project["photos of technologies"])
                             ? project["photos of technologies"].map((tech, index) => (
-                                <img key={index} src={tech} alt={`Technology ${index}`} className="w-12 h-12" />
+                                <img key={index} src={tech} alt={`Technology ${index}`} className="size-12" />
                             ))
-                            : <img src={project["photos of technologies"]} alt="Technology" className="w-12 h-12" />}
+                            : <img src={project["photos of technologies"]} alt="Technology" className="size-12" />}
                     </div>
-                </div>
 
-                <a href={project["link to repos"]} className="inline-block mt-8 px-8 py-4 bg-gray-800 text-white rounded-full hover:bg-gray-700 shadow-md">
-                    Репозиторий на GitHub
-                </a>
+                    <a href={project["link to repos"]} className="mt-8 px-8 py-4 bg-transparent text-gray-200 border-2 border-gray-200 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105 hover:opacity-60">
+                        Репозиторий на GitHub
+                    </a>
+
+
+                </div>
             </div>
         </div>
     );
