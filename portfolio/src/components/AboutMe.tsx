@@ -8,28 +8,28 @@ import './AboutMe.css';
 function AboutMe() {
 
     return (
-        <div className="w-full min-h-screen bg-stone-900 text-gray-200 -my-20 py-28 flex flex-col justify-center items-center" id='about_me'>
-            <div className="wrapper w-full max-w-7xl flex flex-col items-center lg:flex-row lg:items-center justify-between px-12">
+        <div className="w-full min-h-screen bg-stone-900 text-gray-200 lg:-my-20  flex flex-col justify-center items-center" id='about_me'>
+            <div className="wrapper lg:w-fit w-full max-w-7xl flex flex-col items-center lg:flex-row lg:items-center justify-between px-12">
                 
-                <div className="glassmorphism-card flex-1 flex flex-col items-center text-center justify-center p-10 shadow-2xl lg:mr-16">
-                    <h1 className="text-5xl font-bold text-white drop-shadow-md lg:text-left">
+                <div className="glassmorphism-card flex-1 flex flex-col items-center text-center justify-center lg:p-6 shadow-2xl lg:mr-12 z-20 bg-stone-900 relative mt-80">
+                    <h1 className="lg:text-5xl text-4xl font-bold text-white drop-shadow-md text-center p-7 pb-5">
                         Давайте познакомимся
                     </h1>
-                    <hr className="w-[40%] lg:w-[30%] mx-auto lg:mx-0 my-8 border-t-2 border-t-amber-500" />
-                    <p className="text-xl leading-relaxed text-gray-300 tracking-wide font-light w-full lg:w-[38rem] text-justify">
+                    <hr className="w-[40%] lg:w-[30%] mx-auto lg:my-4 mb-4 border-t-2 border-t-amber-500" />
+                    <p className="lg:text-xl text-lg lg:leading-relaxed text-gray-300 lg:tracking-wide font-light w-full lg:w-[38rem] px-5 text-pretty">
                         Добрый день! Меня зовут Диана Кобец. Я начинающий фронтенд-разработчик. Мой стек: TypeScript, React, SASS, Tailwind, Node.js. Обучаюсь в МГТУ им. Н. Э. Баумана на 3 курсе по направлению “Прикладная математика”. В свободное от учебы время уделяю внимание спорту и творчеству. Люблю учиться новому и умею принимать критику. Быстро нахожу общий язык с новыми людьми и вливаюсь в компании.
                     </p>
-                    <button onClick={()=>scrollToProjects('projects')} className="inline-block mt-6 w-[4.5rem] bg-amber-500 rounded-full shadow-lg hover:bg-amber-600 transition-transform duration-300 ease-in-out transform hover:scale-110">
+                    <button onClick={()=>scrollToProjects('projects')} className="inline-block lg:mt-6 my-4 w-[4.5rem] bg-amber-500 rounded-full shadow-lg hover:bg-amber-600 transition-transform duration-300 ease-in-out transform hover:scale-110">
                         <span className="text-white text-4xl font-thin">&#709;</span>
                     </button>
                 </div>
 
                 
-                <div className="relative flex-shrink-0 mt-12 lg:mt-0 lg:ml-12 photo-container">
-                    <div className="photo-wrapper relative h-[451px] w-[350px] rounded-[40px] overflow-hidden">
-                        <img src={me} alt="me" className="me h-full w-full object-cover rounded-[40px] shadow-xl transition-transform duration-500 ease-in-out hover:scale-105" />
+                <div className=" lg:flex-shrink-0 mt-20 lg:mt-12 lg:ml-24 lg:relative overflow-hidden absolute mx-7 z-10 top-4">
+                    <div className="photo-wrapper lg:h-[450px] lg:w-[350px] rounded-[40px] overflow-hidden">
+                        <img src={me} alt="me" className="me h-full w-full object-cover rounded-[40px] shadow-xl" />
                         
-                        <div className="hover-shadow absolute bottom-0 left-0 w-full h-1/3 opacity-0 transition-opacity duration-300"></div>
+                        <div className="hover-shadow absolute bottom-0 left-0 w-full h-1/3 opacity-0 transition-opacity duration-300"/>
                         
                         <div className="social-icons absolute bottom-6 left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-300 flex space-x-4">
                             <a href="https://github.com/DianaKobets" target="_blank" rel="noopener noreferrer">

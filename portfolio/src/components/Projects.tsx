@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"; 
+    import React, { useState, useEffect, useRef } from "react"; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Slide from './Slide.tsx';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
@@ -52,10 +52,10 @@ function Projects() {
 
 
     return (
-        <div className="flex flex-col w-full justify-center relative text-gray-200 bg-stone-900 text-5xl p-8" id="projects">
-            <h1 className="inline-block text-5xl font-bold tracking-wide text-center pb-24">Мои проекты</h1>
+        <div className="flex flex-col w-full justify-center relative text-gray-200 bg-stone-900 text-5xl lg:p-8 mb-0" id="projects">
+            <h1 className="inline-block text-5xl font-bold tracking-wide text-center lg:py-24 py-6">Мои проекты</h1>
 
-            <button className="custom-prev-button bg-amber-500 bg-opacity-80 px-4 py-2 absolute left-48 top-1/2 rounded-full z-10 bg-blend"
+            <button className="custom-prev-button bg-amber-500 bg-opacity-80 px-4 py-2 lg:absolute left-48 top-1/2 rounded-full hidden"
                 onClick={handlePrevSlide}
             >
                 &#5176;
@@ -70,7 +70,7 @@ function Projects() {
                 pagination={{ el: '.swiper-pagination', clickable: true }}
                 modules={[Pagination, Navigation]}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
-                className=" -top-12 w-[32rem]"
+                className=" -top-12 w-[36rem] lg:mb-11"
             >
                 {projects.map((project) => (
                     <SwiperSlide key={project.id}>
@@ -82,12 +82,12 @@ function Projects() {
             </Swiper>
                     
             <button
-                className="custom-prev-button bg-amber-500 bg-opacity-70 px-4 py-2 absolute right-48 top-1/2 rounded-full"
+                className="custom-prev-button bg-amber-500 bg-opacity-70 px-4 py-2 lg:absolute hidden right-48 top-1/2 rounded-full"
                 onClick={handleNextSlide}
             >
                 &#5171;
             </button>
-
+            <div className="swiper-pagination mr-28"/>
             
         </div>
     );

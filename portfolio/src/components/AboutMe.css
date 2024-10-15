@@ -16,11 +16,11 @@ body{
   display: inline-block; 
   white-space: nowrap; 
   overflow: hidden;
-  animation: scroll 13s linear infinite;
+  animation: scroll 7s linear infinite;
 }
 
 .glassmorphism-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(27, 27, 27);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 40px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
@@ -44,11 +44,6 @@ body{
 .arrow-button:hover {
   transform: scale(1.2);
   background: rgba(255, 255, 255, 0.3);
-}
-
-.photo-container {
-  position: relative;
-  overflow: hidden;
 }
 
 .hover-shadow {

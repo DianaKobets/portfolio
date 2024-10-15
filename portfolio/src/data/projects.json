@@ -18,5 +18,15 @@
       "description": "Проект для которого я разрабатывала адаптивный дизайн, а затем реализовывала его на WordPress. Первый коммерческий проект. В ходе выполнения освоила разработку на WordPress, а также углубилась в тему адаптивного дизайна",
       "photos of technologies": ["../icons/css.svg", "../icons/react.svg"],
       "page": "/ProjectPage2"
+    },
+    {
+      "id": 3,
+      "name": "Rick&Morty",
+      "image": [
+        "/img/RM1.png", "/img/RM2.png", "/img/RM3.png"],
+      "link to repos": "https://ankar.ru/",
+      "description": "Тестовое задание. В ходе выполнения познакомилась с VueJS, усвершенствовала знания в работе с API",
+      "photos of technologies": ["../icons/css.svg", "../icons/react.svg"],
+      "page": "/ProjectPage3"
     }
   ]
