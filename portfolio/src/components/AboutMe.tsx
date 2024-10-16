@@ -8,10 +8,10 @@ import './AboutMe.css';
 function AboutMe() {
 
     return (
-        <div className="w-full min-h-screen bg-stone-900 text-gray-200 lg:-my-20  flex flex-col justify-center items-center" id='about_me'>
-            <div className="wrapper lg:w-fit w-full max-w-7xl flex flex-col items-center lg:flex-row lg:items-center justify-between px-12">
+        <div className="w-full overflow-hidden bg-stone-900 text-gray-200 flex flex-col justify-center items-center" id='about_me'>
+            <div className="wrapper lg:w-fit w-full max-w-7xl flex flex-col items-center lg:flex-row lg:items-center justify-between px-7">
                 
-                <div className="glassmorphism-card flex-1 flex flex-col items-center text-center justify-center lg:p-6 shadow-2xl lg:mr-12 z-20 bg-stone-900 relative mt-80">
+                <div className="glassmorphism-card flex-1 flex flex-col items-center text-center justify-center lg:px-3 shadow-2xl lg:mr-12 z-20 bg-stone-900 relative lg:mt-10 mt-96">
                     <h1 className="lg:text-5xl text-4xl font-bold text-white drop-shadow-md text-center p-7 pb-5">
                         Давайте познакомимся
                     </h1>
@@ -25,7 +25,7 @@ function AboutMe() {
                 </div>
 
                 
-                <div className=" lg:flex-shrink-0 mt-20 lg:mt-12 lg:ml-24 lg:relative overflow-hidden absolute mx-7 z-10 top-4">
+                <div className=" lg:flex-shrink-0 mt-20 lg:mt-6 lg:ml-24 lg:relative overflow-hidden absolute mx-7 z-10 top-4">
                     <div className="photo-wrapper lg:h-[450px] lg:w-[350px] rounded-[40px] overflow-hidden">
                         <img src={me} alt="me" className="me h-full w-full object-cover rounded-[40px] shadow-xl" />
                         

@@ -11,9 +11,9 @@ import ts from '../icons/ts.svg';
 
 function Skills(){
     return (
-        <div className="flex flex-col items-center" id='skills'>
+        <div className="flex flex-col items-center lg:mt-16" id='skills'>
             <h1 className="text-5xl text-gray-200 font-bold">Мои навыки</h1>
-            <div className="lg:columns-4 columns-2 gap-8 my-16">
+            <div className="md:columns-4 columns-2 gap-8 my-16">
                 <OneSkill src={bootstrap} alt="bootstrap-icon" />
                 <OneSkill src={css} alt="css-icon" />
                 <OneSkill src={html} alt="html-icon"/>

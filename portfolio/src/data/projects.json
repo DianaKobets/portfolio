@@ -24,7 +24,7 @@
       "name": "Rick&Morty",
       "image": [
         "/img/RM1.png", "/img/RM2.png", "/img/RM3.png"],
-      "link to repos": "https://ankar.ru/",
+      "link to repos": "https://github.com/DianaKobets/RickAndMorty",
       "description": "Тестовое задание. В ходе выполнения познакомилась с VueJS, усвершенствовала знания в работе с API",
       "photos of technologies": ["../icons/css.svg", "../icons/react.svg"],
       "page": "/ProjectPage3"

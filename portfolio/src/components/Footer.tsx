@@ -28,7 +28,7 @@ function Footer() {
                     </a>
                 </button>
             </div>
-            <span className="copyright lg:my-auto mx-auto pt-5">&#169;skidiko 2024</span>
+            <span className="copyright lg:my-auto lg:mr-5 mx-auto pt-5">&#169;skidiko 2024</span>
         </div>
     );
 }

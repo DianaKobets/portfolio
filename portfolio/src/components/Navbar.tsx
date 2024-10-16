@@ -28,9 +28,9 @@ function Navbar() {
                     <NavItem href="about_me">{'Обо мне'}</NavItem>
                     <NavItem href="projects">{'Проекты'}</NavItem>
                     <NavItem href="skills">{'Навыки'}</NavItem>
-                    <NavItem href="resume">{'Резюме'}</NavItem>
+                    <NavItem href="resume"><a href="https://reutov.hh.ru/resume/f8aa82adff0cad767d0039ed1f4b6f71574e38" target="_blank" rel="noopener noreferrer">Резюме</a></NavItem>
                     <button className="flex place-items-center justify-center text-lg bg-amber-500 text-stone-900 rounded-lg w-44 h-10 hover:bg-amber-600 transition-transform duration-300 hover:scale-105 shadow-md">
-                        Написать мне
+                        <a href="https://t.me/skidiko" target="_blank" rel="noopener noreferrer">Написать мне</a>
                     </button>
                 </nav>
 
@@ -56,11 +56,11 @@ function Navbar() {
                         <NavItem href="skills">{'Навыки'}</NavItem>
                     </li>
                     <li onClick={handleNav}>
-                        <NavItem href="resume">{'Резюме'}</NavItem>
+                    <NavItem href="resume"><a href="https://reutov.hh.ru/resume/f8aa82adff0cad767d0039ed1f4b6f71574e38" target="_blank" rel="noopener noreferrer">Резюме</a></NavItem>
                     </li>
                     <li>
                         <button onClick={handleNav} className="flex place-items-center justify-center text-lg bg-amber-500 text-stone-900 rounded-lg w-44 h-10 hover:bg-amber-600 transition-transform duration-300 hover:scale-105 shadow-md">
-                            Написать мне
+                            <a href="https://t.me/skidiko" target="_blank" rel="noopener noreferrer">Написать мне</a>
                         </button>
                     </li>
                 </ul>
