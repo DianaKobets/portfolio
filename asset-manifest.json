@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.89ed2d1b.css",
+    "main.js": "/portfolio/static/js/main.352b29f1.js",
+    "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/me.svg": "/portfolio/static/media/me.f223f51cf0d01f0e59d8b47912c459fc.svg",
+    "static/media/tg.svg": "/portfolio/static/media/tg.2d247a8d5b6786f6140fcc7933232dff.svg",
+    "static/media/react.svg": "/portfolio/static/media/react.2f8172e6385f550a72b62645fe0a9543.svg",
+    "static/media/swiper.svg": "/portfolio/static/media/swiper.7910dad71e411d5ee7a38f0d55588db8.svg",
+    "static/media/html.svg": "/portfolio/static/media/html.53dc8936414a5c5dbc5f288518e62ab6.svg",
+    "static/media/git.svg": "/portfolio/static/media/git.0ff7412d1b384a5a676faafcbec9499d.svg",
+    "static/media/bootstrap.svg": "/portfolio/static/media/bootstrap.feabea0530820c69537142b748690563.svg",
+    "static/media/ts.svg": "/portfolio/static/media/ts.0aaa565c4b4fc20d70706696c0d6add1.svg",
+    "static/media/tailwind.svg": "/portfolio/static/media/tailwind.77b054444adfad16a87f4ec4bbbeb3e4.svg",
+    "static/media/css.svg": "/portfolio/static/media/css.eef699dbbb5e33146a7a8c1a87a94d6a.svg",
+    "static/media/node.svg": "/portfolio/static/media/node.1bce6beea3ec531f6f355890358d2f52.svg",
+    "index.html": "/portfolio/index.html",
+    "static/media/icons8-главная-96.svg": "/portfolio/static/media/icons8-главная-96.78fc1a7335743f29c588b6d4b62cff60.svg",
+    "main.89ed2d1b.css.map": "/portfolio/static/css/main.89ed2d1b.css.map",
+    "main.352b29f1.js.map": "/portfolio/static/js/main.352b29f1.js.map",
+    "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89ed2d1b.css",
+    "static/js/main.352b29f1.js"
+  ]
+}
